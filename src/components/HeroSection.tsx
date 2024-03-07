@@ -8,14 +8,14 @@ type Props = {};
 
 const HeroSection = (props: Props) => {
   return (
-    <div className="relative">
+    <div className=" relative">
       <div
         className="absolute bg-heroTriangle pl-3  top-0 left-0 w-full h-full z-0"
         style={{
           clipPath: "polygon(100% 12%, 0% 100%, 100% 100%)", // Üçgen oluşturan clip-path
         }}
       ></div>
-      <div className="px-20 py-20 w-full ">
+      <div className="px-20 py-20 max-w-1440 mx-auto ">
         <div className="flex gap-5 ">
           <div className="flex flex-col w-3/5 ">
             <div className="flex flex-col self-stretch my-auto text-slate-900 max-md:mt-10 max-md:max-w-full">
@@ -58,7 +58,7 @@ const HeroSection = (props: Props) => {
         </div>
       </div>
 
-      <div className="px-20 py-20 w-full  grid grid-cols-3 gap-20">
+      <div className="px-20 py-20 max-w-1440 mx-auto  grid grid-cols-3 gap-20">
         {contentBoxData.map((item, index) => (
           <ContentBoxHero
             key={index}

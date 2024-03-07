@@ -9,6 +9,9 @@ import reviewer3 from "./images/reviewer3.png";
 import brand1 from "./images/brand1.png";
 import brand2 from "./images/brand2.png";
 import brand3 from "./images/brand3.png";
+import pictures from "./images/pictures.png";
+import worldMap from "./images/worldMap.png";
+import mapProduct from "./images/mapProduct.png";
 
 import PlayCircle from "./icons/play-circle.svg";
 import trophyIcon from "./icons/trophy.svg";
@@ -18,8 +21,16 @@ import cartIcon from "./icons/cart.svg";
 import check from "./icons/check.svg";
 import prewButtonIcon from "./icons/prewButton.svg";
 import nextButtonIcon from "./icons/nextButton.svg";
+import arrowRightIcon from "./icons/arrowRight.svg";
+import searchIcon from "./icons/search.svg";
+import podcastIcon from "./icons/podcast.svg";
+import roketIcon from "./icons/roket.svg";
+import screenIcon from "./icons/screen.svg";
+import settingsIcon from "./icons/settings.svg";
+import shildCheckIcon from "./icons/shildCheck.svg";
 
 import triangleGreenShape from "./shapes/triangleGreen.svg";
+import wavesShape from "./shapes/waves.svg";
 
 export {
   PexelsPhotoByRayPiedra,
@@ -33,13 +44,24 @@ export {
   brand1,
   brand2,
   brand3,
+  pictures,
+  worldMap,
+  mapProduct,
   PlayCircle,
   trophyIcon,
   tunnelIcon,
   tvIcon,
   cartIcon,
+  arrowRightIcon,
+  searchIcon,
+  podcastIcon,
+  roketIcon,
+  screenIcon,
+  settingsIcon,
+  shildCheckIcon,
   check,
   prewButtonIcon,
   nextButtonIcon,
   triangleGreenShape,
+  wavesShape,
 };

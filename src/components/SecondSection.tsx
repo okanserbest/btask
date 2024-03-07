@@ -1,6 +1,6 @@
 import React from "react";
 import SecontSectionCard from "./SecondSectionCard";
-import { secondSectionData } from "@/data/SecondSection";
+import { secondSectionData } from "@/data/secondSection";
 
 type Props = {};
 
