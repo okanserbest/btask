@@ -10,7 +10,7 @@ const HeroSection = (props: Props) => {
   return (
     <div className="relative">
       <div
-        className="absolute bg-heroTriangle ml-3  top-0 left-0 w-full h-full z-0"
+        className="absolute bg-heroTriangle pl-3  top-0 left-0 w-full h-full z-0"
         style={{
           clipPath: "polygon(100% 12%, 0% 100%, 100% 100%)", // Üçgen oluşturan clip-path
         }}

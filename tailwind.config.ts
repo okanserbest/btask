@@ -18,6 +18,12 @@ const config: Config = {
         midnightBlue: "#0F172A",
         heroTriangle: "#FEF3C7",
       },
+      boxShadow: {
+        'secondSectionCard': '0px 25px 50px -12px rgba(255, 255, 255, 0.25), 0px 0px 15px rgba(255, 255, 255, 0.07)',
+      },
+      maxWidth: {
+        '1440': '1440px',
+      },
     },
   },
   plugins: [],
