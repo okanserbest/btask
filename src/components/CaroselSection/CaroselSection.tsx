@@ -30,7 +30,7 @@ const CaroselSection = (props: Props) => {
   } = usePrevNextButtons(emblaApi);
 
   return (
-    <div className="max-w-1440 mx-auto">
+    <div className="max-w-1440 mx-auto w-full">
       <div className="flex flex-col justify-center px-20 py-12 max-md:px-5">
         <div className="flex gap-5 justify-between mt-8 max-md:flex-wrap max-md:max-w-full">
           <div className="grow text-6xl font-extrabold leading-[61.6px] text-slate-900 max-md:max-w-full max-md:text-4xl">

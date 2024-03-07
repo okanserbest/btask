@@ -12,6 +12,8 @@ import brand3 from "./images/brand3.png";
 import pictures from "./images/pictures.png";
 import worldMap from "./images/worldMap.png";
 import mapProduct from "./images/mapProduct.png";
+import AppStore from "./icons/footer/AppStore.png";
+import GooglePlay from "./icons/footer/GooglePlay.png";
 
 import PlayCircle from "./icons/play-circle.svg";
 import trophyIcon from "./icons/trophy.svg";
@@ -28,6 +30,12 @@ import roketIcon from "./icons/roket.svg";
 import screenIcon from "./icons/screen.svg";
 import settingsIcon from "./icons/settings.svg";
 import shildCheckIcon from "./icons/shildCheck.svg";
+import facebookIcon from "./icons/footer/facebook.svg";
+import instagramIcon from "./icons/footer/instagram.svg";
+import linkedinIcon from "./icons/footer/linkedin.svg";
+import twitterIcon from "./icons/footer/twitter.svg";
+import youtubeIcon from "./icons/footer/youtube.svg";
+import worldIcon from "./icons/footer/world.svg";
 
 import triangleGreenShape from "./shapes/triangleGreen.svg";
 import wavesShape from "./shapes/waves.svg";
@@ -47,6 +55,8 @@ export {
   pictures,
   worldMap,
   mapProduct,
+  AppStore,
+  GooglePlay,
   PlayCircle,
   trophyIcon,
   tunnelIcon,
@@ -59,6 +69,12 @@ export {
   screenIcon,
   settingsIcon,
   shildCheckIcon,
+  facebookIcon,
+  instagramIcon,
+  linkedinIcon,
+  twitterIcon,
+  youtubeIcon,
+  worldIcon,
   check,
   prewButtonIcon,
   nextButtonIcon,

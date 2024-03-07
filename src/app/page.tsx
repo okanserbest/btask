@@ -5,6 +5,7 @@ import CaroselSection from "@/components/CaroselSection/CaroselSection";
 import ThirdSection from "@/components/ThirdSection";
 import FourthSection from "@/components/FourthSection";
 import FifthSection from "@/components/FifthSection";
+import FooterSection from "@/components/FooterSection";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <CaroselSection />
       <FourthSection />
       <FifthSection />
+      <FooterSection />
     </main>
   );
 }
