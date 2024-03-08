@@ -12,12 +12,12 @@ export default function Home() {
     <main className="bg-white flex min-h-screen flex-col">
       <Navbar />
       <HeroSection />
-      <SecontSection />
-      <ThirdSection />
-      <CaroselSection />
-      <FourthSection />
-      <FifthSection />
-      <FooterSection />
+      {/* <SecontSection /> */}
+      {/* <ThirdSection /> */}
+      {/* <CaroselSection /> */}
+      {/* <FourthSection /> */}
+      {/* <FifthSection /> */}
+      {/* <FooterSection /> */}
     </main>
   );
 }

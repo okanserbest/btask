@@ -36,6 +36,7 @@ import linkedinIcon from "./icons/footer/linkedin.svg";
 import twitterIcon from "./icons/footer/twitter.svg";
 import youtubeIcon from "./icons/footer/youtube.svg";
 import worldIcon from "./icons/footer/world.svg";
+import menuScaleIcon from "./icons/menuScale.svg";
 
 import triangleGreenShape from "./shapes/triangleGreen.svg";
 import wavesShape from "./shapes/waves.svg";
@@ -78,6 +79,7 @@ export {
   check,
   prewButtonIcon,
   nextButtonIcon,
+  menuScaleIcon,
   triangleGreenShape,
   wavesShape,
 };
