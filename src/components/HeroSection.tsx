@@ -33,10 +33,10 @@ const HeroSection = (props: Props) => {
                 suspendisse nec lorem mauris. Pharetra, eu imperdiet ipsum
                 ultrices amet.
               </div>
-              <div className=" flex justify-between  place-self-center   lg:mx-0 gap-4 lg:place-self-start mt-8 font-medium tracking-wide text-amber-900 whitespace-nowrap">
-                <div className="grow justify-center px-8 py-4 text-xl leading-6 rounded-lg border-2 border-solid border-[color:var(--Amber-900,#78350F)] max-md:px-5">
+              <div className=" flex justify-between  place-self-center   lg:mx-0 gap-4 lg:place-self-start mt-8 font-medium tracking-wide text-amber-900 whitespace-nowrap ">
+                <button className="grow justify-center px-8 py-4 text-xl leading-6 rounded-lg border-2 border-solid border-[color:var(--Amber-900,#78350F)] max-md:px-5 hover:bg-amber-700 hover:text-white">
                   Sign up now
-                </div>
+                </button>
                 <div className="flex gap-2 justify-center px-2 py-3 my-auto text-base leading-6 rounded-lg">
                   <Image
                     width={24}
