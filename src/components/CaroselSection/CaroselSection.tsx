@@ -65,11 +65,13 @@ const CaroselSection = (props: Props) => {
         </div>
         <div className="my-8 lg:my-20 relative">
           <div className="absolute -top-[40px] w-full h-56 lg:h-96    bg-amber-200 z-0"></div>
-          <EmblaCarousel
-            slides={caroselSection}
-            emblaRef={emblaRef}
-            emblaApi={emblaApi}
-          />
+          <div className="z-10">
+            <EmblaCarousel
+              slides={caroselSection}
+              emblaRef={emblaRef}
+              emblaApi={emblaApi}
+            />
+          </div>
         </div>
       </div>
     </div>

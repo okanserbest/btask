@@ -1,6 +1,7 @@
 import { menuScaleIcon } from "@/assets";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 type Props = {};
 
@@ -16,9 +17,11 @@ const Navbar = (props: Props) => {
         <button className="self-stretch my-auto">Pricing</button>
         <button className="self-stretch my-auto">Resources</button>
         <button className="self-stretch my-auto">Log In</button>
-        <button className="grow justify-center self-stretch px-7 py-3 whitespace-nowrap rounded-lg border-2 border-solid border-[color:var(--Amber-900,#78350F)] hover:bg-amber-700 hover:text-white">
-          Sign up now
-        </button>
+        <Link href="/quiz">
+          <button className="grow justify-center self-stretch px-7 py-3 whitespace-nowrap rounded-lg border-2 border-solid border-[color:var(--Amber-900,#78350F)] hover:bg-amber-700 hover:text-white">
+            Sign up now
+          </button>
+        </Link>
       </div>
       <div className="flex lg:hidden">
         <button className="self-stretch my-auto">
