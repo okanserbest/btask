@@ -48,7 +48,7 @@ const SecondSectionCard = ({
         </>
       )}
 
-      <div className="flex flex-col grow pb-8 w-full text-white  border  border-solid shadow-lg bg-slate-900 border-[color:var(--Blue-Gray-900,#0F172A)]  rounded-lg z-20">
+      <div className="flex flex-col grow pb-8 w-full text-white  border  border-solid shadow-lg bg-slate-900 boder border-slate-900   rounded-lg z-20">
         <Image
           loading="lazy"
           src={image}
@@ -59,7 +59,7 @@ const SecondSectionCard = ({
           <div className="text-2xl font-bold leading-7"> {title} </div>
           <div className="mt-4 text-lg leading-7">{description}</div>
         </div>
-        <button className="flex justify-center items-center self-center px-16 py-4 mt-8 max-w-full text-xl font-medium tracking-wide leading-6  border-2 border-solid border-[color:var(--White,#FFF)] w-[331px] hover:bg-slate-600  rounded-lg">
+        <button className="flex justify-center items-center self-center px-16 py-4 mt-8 max-w-full text-xl font-medium tracking-wide leading-6  border-2 border-solid border-white hover:bg-slate-600  rounded-lg">
           <div className="flex gap-4">
             <Image
               src={cartIcon}

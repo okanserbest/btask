@@ -6,9 +6,9 @@ type Props = {};
 
 const FifthSection = (props: Props) => {
   return (
-    <div className="bg-amber-900 w-full">
-      <div className="max-w-1440 mx-auto relative px-20">
-        <div className=" min-w-max min-h-full overflow-hidden">
+    <div className="bg-amber-900 w-full z-30">
+      <div className="max-w-1440 mx-auto relative overflow-x-clip px-20">
+        <div className=" min-w-max min-h-full ">
           <Image
             src={worldMap}
             width={1049}
@@ -20,7 +20,7 @@ const FifthSection = (props: Props) => {
         </div>
 
         <div className="absolute flex flex-col  z-10 top-0 right-0 bottom-0 left-0">
-          <div className="absolute flex flex-col left-32  -top-6 items-center">
+          <div className="absolute flex flex-col left-16  -top-6 items-center">
             <Image
               src={mapProduct}
               alt="mapProduct"

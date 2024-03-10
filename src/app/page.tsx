@@ -14,10 +14,10 @@ export default function Home() {
       <HeroSection />
       <SecontSection />
       <ThirdSection />
-      {/* <CaroselSection /> */}
-      {/* <FourthSection /> */}
-      {/* <FifthSection /> */}
-      {/* <FooterSection /> */}
+      <CaroselSection />
+      <FourthSection />
+      <FifthSection />
+      <FooterSection />
     </main>
   );
 }

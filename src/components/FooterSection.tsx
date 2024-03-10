@@ -18,7 +18,7 @@ const FooterSection = (props: Props) => {
     <div className="bg-slate-900">
       <div className="max-w-1440 mx-auto">
         <div className="flex flex-col justify-center px-20 bg-slate-900 max-md:px-5">
-          <div className="py-12 border-t border-b border-solid border-slate-700 max-md:max-w-full">
+          <div className="py-12 border-t border-b border-solid border-slate-700 max-md:max-w-full text-center lg:text-left">
             <div className="flex gap-5 max-md:flex-col max-md:gap-0">
               <div className="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
                 <div className="flex flex-col grow py-3 text-base leading-6 whitespace-nowrap text-slate-200 max-md:mt-10">
@@ -65,18 +65,18 @@ const FooterSection = (props: Props) => {
                     src={AppStore}
                     alt="AppStore"
                     loading="lazy"
-                    className="mt-6 max-w-full aspect-[3.03] w-[120px]"
+                    className="mt-6 max-w-full mx-auto lg:mx-0 aspect-[3.03] w-[120px]"
                   />
                   <Image
                     src={GooglePlay}
                     alt="GooglePlay"
                     loading="lazy"
-                    className="mt-3.5 max-w-full aspect-[3.33] w-[135px]"
+                    className="mt-3.5 max-w-full mx-auto lg:mx-0 aspect-[3.33] w-[135px]"
                   />
                   <div className="mt-14 text-base font-medium leading-4 text-slate-200 max-md:mt-10">
                     Follow Us
                   </div>
-                  <div className="flex gap-4 pr-20 mt-5 max-md:pr-5">
+                  <div className="flex gap-4 pr-20 mt-5 max-md:pr-5 mx-auto lg:mx-0">
                     <Image
                       src={youtubeIcon}
                       alt="youtubeIcon"
@@ -112,8 +112,8 @@ const FooterSection = (props: Props) => {
               </div>
             </div>
           </div>
-          <div className="flex gap-5 justify-between py-6 text-base leading-6 text-slate-200 max-md:flex-wrap">
-            <div className="flex-auto my-auto max-md:max-w-full">
+          <div className="flex gap-5 justify-center lg:justify-between py-6 text-base leading-6 text-slate-200 max-md:flex-wrap ">
+            <div className="flex-auto my-auto max-md:max-w-full text-center lg:text-left">
               Collers @ 2023. All rights reserved.
             </div>
             <div className="flex shrink gap-5 justify-between items-center whitespace-nowrap basis-auto grow-0">

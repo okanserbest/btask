@@ -24,11 +24,11 @@ const FourthSection = (props: Props) => {
         className="object-cover absolute inset-0 size-full"
       />
       <div className="max-w-1440 mx-auto relative">
-        <div className="flex flex-col justify-center pt-20">
-          <div className="mx-20 text-6xl font-extrabold leading-[61.6px] text-slate-900 max-md:mr-2.5 max-md:max-w-full max-md:text-4xl">
+        <div className="flex flex-col justify-center pt-10 lg:pt-20">
+          <div className="mx-4 lg:mx-20 text-3xl lg:text-6xl font-bold lg:font-extrabold leading-9 lg:leading-[61.6px] text-center lg:text-left text-slate-900 ">
             Grow your collection
           </div>
-          <div className="mx-20 mt-8 text-lg leading-7 text-slate-900 max-md:mr-2.5 max-md:max-w-full">
+          <div className="mx-4 lg:mx-20 mt-8 text-base lg:text-lg leading-7 lg:leading-7 text-center lg:text-left text-slate-900  ">
             Enim neque massa porta adipiscing elit. Sem libero id faucibus nibh
             amet dictum pellentesque sed. Eu non turpis risus odio sapien, fames
             sit rhoncus.
@@ -36,29 +36,27 @@ const FourthSection = (props: Props) => {
             Nec magna sed interdum sit purus tellus. Et volutpat proin neque
             placerat at bibendum quam tellus.
           </div>
-          <div className="flex overflow-hidden relative flex-col px-16 pb-20 mt-20 w-full min-h-[684px] max-md:px-5 max-md:mt-10 max-md:max-w-full">
-            <div className="relative mx-5 mb-6 max-md:mr-2.5 max-md:max-w-full">
-              <div className="flex gap-5 max-md:flex-col max-md:gap-0">
-                <div className="flex flex-col w-[21%] max-md:ml-0 max-md:w-full">
-                  <div className="flex relative flex-col text-xl font-medium tracking-wide leading-6 text-slate-900 max-md:mt-10">
-                    <div className="flex gap-4 p-4 whitespace-nowrap bg-white rounded-lg shadow">
+          <div className="flex overflow-hidden flex-col ml-4 lg:mx-20 pb-20 mt-8 lg:mt-20 ">
+            <div className=" mx-5 mb-6  ">
+              <div className="flex gap-5  flex-col lg:flex-row ">
+                <div className="flex flex-col  lg:w-[21%]">
+                  <div className="flex  gap-4   lg:flex-col text-xl font-medium tracking-wide leading-6 text-slate-900 whitespace-nowrap overflow-x-scroll lg:overflow-x-visible  no-scrollbar ">
+                    <div className="flex gap-4 p-4 whitespace-nowrap bg-white rounded-lg shadow-md min-w-52 lg:min-w-64">
                       <Image
                         src={searchIcon}
                         loading="lazy"
                         alt="searchIcon"
-                        className="shrink-0 w-6 aspect-square"
+                        className=" w-6 aspect-square"
                       />
-                      <div className="flex gap-2">
-                        <div className="grow">Bibendum tellus</div>
-                        <Image
-                          src={arrowRightIcon}
-                          alt="arrowRightIcon"
-                          loading="lazy"
-                          className="shrink-0 w-6 aspect-square"
-                        />
-                      </div>
+                      <div className="grow self-center">Bibendum tellus</div>
+                      <Image
+                        src={arrowRightIcon}
+                        alt="arrowRightIcon"
+                        loading="lazy"
+                        className="hidden lg:block  w-6 aspect-square"
+                      />
                     </div>
-                    <div className="flex gap-4 p-4 mt-4 rounded-lg">
+                    <div className="flex gap-4 p-4  rounded-lg">
                       <Image
                         src={shildCheckIcon}
                         alt="shildCheckIcon"
@@ -67,7 +65,7 @@ const FourthSection = (props: Props) => {
                       />
                       <div className="flex-auto">Cras eget</div>
                     </div>
-                    <div className="flex gap-4 p-4 mt-4 rounded-lg">
+                    <div className="flex gap-4 p-4  rounded-lg">
                       <Image
                         src={roketIcon}
                         alt="roketIcon"
@@ -76,7 +74,7 @@ const FourthSection = (props: Props) => {
                       />
                       <div className="flex-auto">Dolor pharetra</div>
                     </div>
-                    <div className="flex gap-4 p-4 mt-4 rounded-lg">
+                    <div className="flex gap-4 p-4  rounded-lg">
                       <Image
                         src={screenIcon}
                         alt="screenIcon"
@@ -85,7 +83,7 @@ const FourthSection = (props: Props) => {
                       />
                       <div className="flex-auto">Amet, fringilla</div>
                     </div>
-                    <div className="flex gap-4 p-4 mt-4 rounded-lg">
+                    <div className="flex gap-4 p-4  rounded-lg">
                       <Image
                         src={podcastIcon}
                         alt="podcastIcon"
@@ -94,7 +92,7 @@ const FourthSection = (props: Props) => {
                       />
                       <div className="flex-auto">Amet nibh</div>
                     </div>
-                    <div className="flex gap-4 p-4 mt-4 rounded-lg">
+                    <div className="flex gap-4 p-4  rounded-lg">
                       <Image
                         src={settingsIcon}
                         alt="settingsIcon"
@@ -105,8 +103,8 @@ const FourthSection = (props: Props) => {
                     </div>
                   </div>
                 </div>
-                <div className="flex flex-col ml-5 w-[79%] max-md:ml-0 max-md:w-full">
-                  <div className="flex relative flex-col grow justify-center max-md:mt-10 max-md:max-w-full">
+                <div className="flex flex-col ml-5 lg:w-[79%]">
+                  <div className=" justify-center">
                     <Image
                       src={pictures}
                       alt="pictures"

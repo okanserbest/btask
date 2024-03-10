@@ -31,12 +31,12 @@ const CaroselSection = (props: Props) => {
 
   return (
     <div className="max-w-1440 mx-auto w-full">
-      <div className="flex flex-col justify-center px-20 py-12 max-md:px-5">
+      <div className="flex flex-col justify-center px-4 lg:px-20 py-12 ">
         <div className="flex gap-5 justify-between mt-8 max-md:flex-wrap max-md:max-w-full">
-          <div className="grow text-6xl font-extrabold leading-[61.6px] text-slate-900 max-md:max-w-full max-md:text-4xl">
+          <div className="grow text-center lg:text-start text-3xl lg:text-6xl font-extrabold leading-[61.6px] text-slate-900 max-md:max-w-full">
             Because they love us
           </div>
-          <div className="flex gap-5 justify-between my-auto">
+          <div className="hidden lg:flex gap-5 justify-between my-auto">
             <button
               onClick={onPrevButtonClick}
               disabled={prevBtnDisabled}
@@ -63,7 +63,8 @@ const CaroselSection = (props: Props) => {
             </button>
           </div>
         </div>
-        <div className="my-20">
+        <div className="my-8 lg:my-20 relative">
+          <div className="absolute -top-[40px] w-full h-56 lg:h-96    bg-amber-200 z-0"></div>
           <EmblaCarousel
             slides={caroselSection}
             emblaRef={emblaRef}

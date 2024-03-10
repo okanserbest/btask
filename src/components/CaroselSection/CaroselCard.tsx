@@ -22,7 +22,9 @@ const CaroselCard = ({ reviewData }: Props) => {
             />
             <div className="flex-auto my-auto">{brand}</div>
           </div>
-          <div className="mt-8 text-xl leading-10 text-black">{review}</div>
+          <div className="mt-6  lg:mt-8 text-base lg:text-xl leading-6 lg:leading-10 text-black">
+            {review}
+          </div>
           <div className="flex gap-4 justify-between pt-4 mt-4 whitespace-nowrap">
             <Image
               loading="lazy"
