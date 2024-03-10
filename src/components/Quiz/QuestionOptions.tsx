@@ -7,6 +7,8 @@ interface OptionProps {
   handleOptionClick?: (index: number) => void;
 }
 
+const optionsName = ["A", "B", "C", "D"];
+
 const QuestionOptions = ({ question, handleOptionClick }: OptionProps) => {
   const { questionText, options, answerIndex } = question;
 
@@ -18,14 +20,14 @@ const QuestionOptions = ({ question, handleOptionClick }: OptionProps) => {
           <button
             key={index}
             className={`w-full text-left px-4 py-2 rounded-lg border-2 
-                                        ${
-                                          answerIndex === index
-                                            ? "border-blue-500 bg-blue-100"
-                                            : "border-gray-300"
-                                        }`}
+              ${
+                answerIndex === index
+                  ? "border-blue-500 bg-blue-100"
+                  : "border-gray-300"
+              }`}
             onClick={() => handleOptionClick && handleOptionClick(index)}
           >
-            {option}
+            {optionsName[index]} - {option}
           </button>
         ))}
       </div>
