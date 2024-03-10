@@ -1,10 +1,11 @@
+"use client";
 import { useEffect, useRef } from "react";
 
 const useInterval = (callback: () => void, delay: any) => {
-  const savedCallback = useRef<() => void | null>(null);
+  const savedCallback = useRef<() => void>(() => {});
 
   useEffect(() => {
-    savedCallback.current = callback; // ts problem is here
+    savedCallback.current = callback;
   }, [callback]);
 
   // Set up the interval.
