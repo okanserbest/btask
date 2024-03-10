@@ -1,54 +1,44 @@
 "use client";
 import useInterval from "@/hooks/useInterval";
-import { fetchQuestion, incrementStep } from "@/lib/features/quizSlice";
+import {
+  changeCanRespond,
+  fetchQuestion,
+  incrementStep,
+} from "@/lib/features/quizSlice";
 import { AppDispatch, RootState } from "@/lib/store";
 import React, { use, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 type Props = {};
 
-const INITIAL_COUNT_QUESTION = 10;
-const INITIAL_COUNT_QUERY = 10;
-
 const timeLimit = {
-  quiz: 600,
   question: 30,
+  blokAnswer: 10,
 };
 
 const Timer = (props: Props) => {
-  const [secondsRemaining, setSecondsRemaining] = useState(timeLimit);
-
-  const [quizTime, setQuizTime] = useState(0);
   const [questionTime, setQuestionTime] = useState(0);
 
   const quiz = useSelector((state: RootState) => state.quiz);
   const dispatch = useDispatch<AppDispatch>();
 
-  const { questions, status, step } = quiz;
-
-  const handleStart = () => {
-    dispatch(fetchQuestion());
-  };
+  const { questions, status, step, canRespond } = quiz;
 
   useEffect(() => {
-    if (quiz.questions.length > 0) {
+    if (questions.length > 0) {
     }
-  }, [quiz.questions]);
+  }, [questions]);
 
   // saniye artışını takip etmek için kullanılan hook
   useInterval(
     () => {
-      if (quizTime < timeLimit.quiz && questionTime < timeLimit.question) {
-        console.log("Time is running", { questionTime, quizTime });
-
-        setQuizTime(quizTime + 1);
+      if (questionTime < timeLimit.question) {
         setQuestionTime(questionTime + 1);
-      } else if (questionTime >= timeLimit.question) {
-        console.log("next question");
-        dispatch(incrementStep());
       } else {
-        console.log("Time is up");
+        dispatch(incrementStep());
       }
+
+      dispatch(changeCanRespond(questionTime >= timeLimit.blokAnswer));
     },
     status === "IN_PROGRESS" ? 1000 : null
   );
@@ -60,47 +50,24 @@ const Timer = (props: Props) => {
     }
   }, [step, status]);
 
-  console.log(quiz);
-
   return (
-    <div className="text-black">
-      {quiz.questions.length > 0 && <div>Questions are ready</div>}
-      {status === "LOADING" && <div>Loading...</div>}
-
-      {status === "INITIAL" && (
-        <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out transform hover:scale-105"
-          onClick={handleStart}
-        >
-          Start Quiz
-        </button>
-      )}
-
+    <div className="flex flex-col items-center justify-center p-4 text-black ">
       {status === "IN_PROGRESS" && (
         <div>
           <div>
-            Quiz Time:
-            {secondsToHms(timeLimit.quiz - quizTime)}
+            Question Time:
+            {timeLimit.question - questionTime}
           </div>
           <div>
-            Question Time:
-            {secondsToHms(timeLimit.question - questionTime)}
+            {step + 1}/{questions.length}
           </div>
         </div>
+      )}
+      {status === "QUIZ_COMPLETED" && (
+        <div className="text-4xl text-green-600">Quiz Completed</div>
       )}
     </div>
   );
 };
 
 export default Timer;
-
-function secondsToHms(d: number) {
-  var h = Math.floor(d / 3600);
-  var m = Math.floor((d % 3600) / 60);
-  var s = Math.floor((d % 3600) % 60);
-
-  var hDisplay = h > 0 ? h + (h == 1 ? ":" : ":") : "";
-  var mDisplay = m > 0 ? m + (m == 1 ? ":" : ":") : "";
-  var sDisplay = s > 0 ? s : "";
-  return hDisplay + mDisplay + sDisplay;
-}

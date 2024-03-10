@@ -13,20 +13,15 @@ export interface Question {
 export interface QuestionState {
     step: number;
     questions: Question[];
-    startTime?: number;
-    endTime?: number;
     status: "INITIAL" | "LOADING" | "IN_PROGRESS" | "QUIZ_COMPLETED";
-}
-
-interface ChangeAnswer {
-    questionIndex: number;
-    answerIndex: number;
+    canRespond: boolean;
 }
 
 const initialState: QuestionState = {
     step: 0,
     questions: [],
     status: "INITIAL",
+    canRespond: false,
 };
 
 // Async Thunk action oluşturma
@@ -57,11 +52,15 @@ export const productSlice = createSlice({
     reducers: {
         incrementStep: (state) => {
             state.step += 1;
+            state.canRespond = false;
             if (state.step === state.questions.length) state.status = "QUIZ_COMPLETED";
         },
-        changeAnswer: (state, action: PayloadAction<ChangeAnswer>) => {
-            state.questions[action.payload.questionIndex].answerIndex = action.payload.answerIndex;
+        changeAnswer: (state, action: PayloadAction<number>) => {
+            state.questions[state.step].answerIndex = action.payload;
         },
+        changeCanRespond: (state, action: PayloadAction<boolean>) => {
+            state.canRespond = action.payload;
+        }
 
     },
     extraReducers: (builder) => {
@@ -71,11 +70,13 @@ export const productSlice = createSlice({
             })
             .addCase(fetchQuestion.fulfilled, (state, action) => {
                 state.questions = action.payload;
+                state.step = 0;
+                state.canRespond = false;
                 state.status = "IN_PROGRESS";
             });
     },
 });
 
-export const { incrementStep, changeAnswer } = productSlice.actions;
+export const { incrementStep, changeAnswer, changeCanRespond } = productSlice.actions;
 
 export default productSlice.reducer;
